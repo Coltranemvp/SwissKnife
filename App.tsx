@@ -1,14 +1,8 @@
 import React from 'react';
-import {Pressable, SafeAreaView, Text} from 'react-native';
+import {Application} from './src/app';
 
 function App(): JSX.Element {
-  return (
-    <SafeAreaView>
-      <Pressable>
-        <Text>lox ebanii</Text>
-      </Pressable>
-    </SafeAreaView>
-  );
+  return <Application />;
 }
 
 export default App;
