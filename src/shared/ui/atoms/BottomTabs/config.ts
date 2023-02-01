@@ -1,7 +1,7 @@
 export enum BottomTabEnum {
   OrderStack = 'packageIcon',
-  SearchOrderStack = 'magnifyingGlass',
+  SearchOrderStack = 'userCircle',
   WalletStack = 'wallet',
-  ProfileScreen = 'userCircle',
+  ProfileScreen = 'magnifyingGlass',
   CourierProfileScreen = 'star',
 }

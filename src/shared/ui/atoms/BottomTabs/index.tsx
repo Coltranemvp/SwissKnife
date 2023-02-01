@@ -31,7 +31,7 @@ export const BottomTabs: React.FC<BottomTabItemProps> = ({
   const styles = useStyles();
 
   const getTabName = (route: string) => {
-    return BottomTabEnum[route as keyof typeof BottomTabEnum] && 'wallet';
+    return BottomTabEnum[route as keyof typeof BottomTabEnum] || 'wallet';
   };
 
   const activeColor = isFocused ? 'red' : 'gray';

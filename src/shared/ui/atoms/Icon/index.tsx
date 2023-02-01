@@ -1,4 +1,4 @@
-import {IconName, iconsList} from '@shared/config/iconList';
+import {IconName, iconsList} from '../../../config/iconList';
 import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 interface IconProps {
@@ -17,8 +17,6 @@ export const Icon: React.FC<IconProps> = ({
   color,
 }) => {
   const IconComponent = iconsList[name] || iconsList.star;
-
-  console.log(IconComponent);
 
   return (
     <IconComponent
