@@ -1,6 +1,18 @@
+import {CustomButton} from '@shared/ui/atoms/CustomButton';
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 
 export const FeedNewScreen: React.FC = () => {
-  return <Text>FeedNewScreen</Text>;
+  return (
+    <View>
+      <CustomButton
+        styleCBView={{}}
+        styleCBText={{color: 'white'}}
+        title={'prosto button'}
+        onPress={() => {
+          console.log(1);
+        }}
+      />
+    </View>
+  );
 };
