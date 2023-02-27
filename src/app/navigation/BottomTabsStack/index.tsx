@@ -6,14 +6,15 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {useStore} from 'effector-react';
 
-import {BottomTabsStackParams} from '../../../shared/types/navigation/BottomTabsStackParams';
-import {FeedNewScreen} from '../../../screens/FeedNewScreen/ui/FeedNewScreen';
-import {ProfileScreen} from '../../../screens/ProfileScreen/ui/ProfileScreen';
-import {RatingScreen} from '../../../screens/RatingScreen/ui/RatingScreen';
-import {SearchScreen} from '../../../screens/SearchScreen/ui/SearchScreen';
 import {BottomTabs} from '@shared/ui/organisms/BottomTabs';
 import {$isScrolledOnBottomTab} from '@shared/model/scrollingContentOnBottomTabs';
 import {useOffsetWithTiming} from '@shared/lib/useOffsetWithTiming';
+import {FeedNewScreen} from '@screens/FeedNewScreen';
+import {BottomTabsStackParams} from '@shared/types/navigation/BottomTabsStackParams';
+
+import {ProfileScreen} from '@screens/ProfileScreen';
+import {RatingScreen} from '@screens/RatingScreen';
+import {SearchScreen} from '@screens/SearchScreen';
 
 const Tab = createBottomTabNavigator<BottomTabsStackParams>();
 
@@ -22,18 +23,20 @@ export const TabNavigation: React.FC = () => {
 
   const animatedStyles = useOffsetWithTiming(isScrolledOnBottomTab);
 
+  const getTabBar = ({state}: BottomTabBarProps) => {
+    return (
+      <BottomTabs
+        focused={state.index}
+        routeNames={state.routeNames}
+        style={animatedStyles}
+      />
+    );
+  };
+
   return (
     <Tab.Navigator
       key="BottomTabs"
-      tabBar={({state}: BottomTabBarProps) => {
-        return (
-          <BottomTabs
-            focused={state.index}
-            routeNames={state.routeNames}
-            style={animatedStyles}
-          />
-        );
-      }}
+      tabBar={getTabBar}
       screenOptions={{
         headerShown: false,
       }}>
