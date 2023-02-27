@@ -1,7 +1,19 @@
 export const themes = {
   primary: {
     BG: {
+      primary: '#E92518',
+      secondary: 'white',
+      tertiary: '#E7ECF1',
+      active: '#E92518',
+      primaryItem: '#E92518',
+      disable: '#F9F9FC',
+      whiteOpacity: 'rgba(255, 255, 255, 0.1)',
+      white: '#FFFFFF',
+    },
+    text: {
       primary: 'white',
+      secondary: 'black',
+      active: 'red',
     },
     bottomTab: {
       primaryBG: '#E92518',
@@ -10,6 +22,8 @@ export const themes = {
       disable: '#B2BCC4',
     },
     icon: {
+      primary: 'black',
+      secondary: '#585858',
       active: '#E92518',
       disable: '#B2BCC4',
     },
@@ -30,7 +44,19 @@ export const themes = {
   },
   dark: {
     BG: {
+      primary: '#E92518',
+      secondary: 'white',
+      tertiary: '#E7ECF1',
+      active: '#E92518',
+      primaryItem: '#E92518',
+      disable: '#F9F9FC',
+      whiteOpacity: 'rgba(255, 255, 255, 0.1)',
+      white: '#FFFFFF',
+    },
+    text: {
       primary: 'white',
+      secondary: 'black',
+      active: 'red',
     },
     bottomTab: {
       primaryBG: '#E92518',
@@ -39,6 +65,8 @@ export const themes = {
       disable: '#AFAFAF',
     },
     icon: {
+      primary: 'black',
+      secondary: '#585858',
       active: '#E92518',
       disable: '#B2BCC4',
     },

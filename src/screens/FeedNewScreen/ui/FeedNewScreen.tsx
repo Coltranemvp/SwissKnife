@@ -5,6 +5,7 @@ import {ScreenTemplate} from '@shared/ui/templates/ScreenTemplate';
 import dayjs from 'dayjs';
 import {useStore} from 'effector-react';
 import React, {useState} from 'react';
+import {HomeScreenHeader} from './HomeScreenHeader';
 
 export const FeedNewScreen: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs());
@@ -16,6 +17,7 @@ export const FeedNewScreen: React.FC = () => {
           setScrolledOnBottomTab(nativeEvent, scrollValue),
         scrollEventThrottle: 32,
       }}>
+      <HomeScreenHeader />
       <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
     </ScreenTemplate>
   );

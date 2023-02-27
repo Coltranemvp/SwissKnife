@@ -28,7 +28,7 @@ export const ScreenTemplate: React.FC<PageTemplateProps> = ({
   const styles = useStyles();
   const {theme} = useTheme();
   const scrollViewRef = useRef(null);
-  const defaultColor = theme.BG.primary;
+  const defaultColor = theme.BG.secondary;
   const currentBackgroundColor = backgroundColor || defaultColor;
 
   useFocusEffect(

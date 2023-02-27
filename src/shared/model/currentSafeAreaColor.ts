@@ -9,7 +9,7 @@ const reset = createEvent();
 
 const $currentSafeAreaColor = restore(
   setSafeAreaColor,
-  themes.primary.BG.primary,
+  themes.primary.BG.tertiary,
 ).reset();
 
 const $isBottomBar = restore(setIsBottomBar, false).reset(reset);
