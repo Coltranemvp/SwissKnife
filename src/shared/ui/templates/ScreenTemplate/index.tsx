@@ -38,7 +38,7 @@ export const ScreenTemplate: React.FC<PageTemplateProps> = ({
         setSafeAreaColor(defaultColor);
         scrollTop(scrollViewRef);
       };
-    }, []),
+    }, [currentBackgroundColor, defaultColor]),
   );
   return (
     <View style={[styles.safeArea(currentBackgroundColor), safeAreaStyle]}>
