@@ -1,12 +1,22 @@
 import {NativeScrollEvent, NativeSyntheticEvent} from 'react-native';
 
-import {SCREEN_HEIGHT} from '@shared/constants/screenSize';
-import {setIsScrolledOnBottomTab} from '@shared/model/scrollingContentOnBottomTabs';
+import {
+  setIsScrolledOnBottomTab,
+  setScrollValue,
+} from '@shared/model/scrollingContentOnBottomTabs';
 
-export const setScrolledOnBottomTab = ({
-  nativeEvent,
-}: NativeSyntheticEvent<NativeScrollEvent>) => {
-  const isScrolled = nativeEvent.contentOffset.y > SCREEN_HEIGHT / 10;
-
-  setIsScrolledOnBottomTab(isScrolled);
+export const setScrolledOnBottomTab = (
+  {nativeEvent}: NativeSyntheticEvent<NativeScrollEvent>,
+  prevValue = 0,
+) => {
+  if (
+    prevValue > nativeEvent.contentOffset.y ||
+    nativeEvent.contentOffset.y <= 0
+  ) {
+    setIsScrolledOnBottomTab(false);
+    setScrollValue(nativeEvent.contentOffset.y);
+    return;
+  }
+  setScrollValue(nativeEvent.contentOffset.y);
+  setIsScrolledOnBottomTab(true);
 };

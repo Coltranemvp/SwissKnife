@@ -6,7 +6,12 @@ import React, {useState} from 'react';
 export const FeedNewScreen: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs());
   return (
-    <ScreenTemplate>
+    <ScreenTemplate
+      scrollProps={{
+        onScroll: nativeEvent =>
+          setScrolledOnBottomTab(nativeEvent, scrollValue),
+        scrollEventThrottle: 32,
+      }}>
       <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
     </ScreenTemplate>
   );
