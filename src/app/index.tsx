@@ -1,4 +1,5 @@
 import {NavigationContainer} from '@react-navigation/native';
+import i18next from '@shared/config/locales/i18n';
 import {
   $currentSafeAreaColor,
   $isBottomBar,
@@ -13,6 +14,7 @@ import {useStyles} from './styles';
 const App: React.FC = () => {
   const safeAreaBackgroundColor = useStore($currentSafeAreaColor);
   const isBottomBar = useStore($isBottomBar);
+  i18next.t('common.email');
   const styles = useStyles();
   return (
     <>
@@ -23,12 +25,10 @@ const App: React.FC = () => {
 
       <MainStack />
 
-      {!isBottomBar ? (
-        <SafeAreaView
-          edges={['bottom']}
-          style={styles.safeArea(safeAreaBackgroundColor)}
-        />
-      ) : null}
+      <SafeAreaView
+        edges={['bottom']}
+        style={styles.safeArea(safeAreaBackgroundColor)}
+      />
     </>
   );
 };

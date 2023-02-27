@@ -5,6 +5,7 @@ import React, {useState} from 'react';
 
 export const FeedNewScreen: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState(dayjs());
+
   return (
     <ScreenTemplate>
       <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
