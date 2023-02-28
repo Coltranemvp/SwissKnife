@@ -32,10 +32,10 @@ export const CustomButton: React.FC<ButtonProps> = ({
   const styles = getButtonDefaultStyle({
     buttonType,
     isDisabled: isDisabled || isLoading,
-    primaryBackgroundColor: theme.primary,
-    secondaryBorderColor: theme.primary,
-    primaryTextColor: theme.white,
-    secondaryTextColor: theme.primary,
+    primaryBackgroundColor: theme.BG.primary,
+    secondaryBorderColor: theme.BG.primary,
+    primaryTextColor: theme.BG.secondary,
+    secondaryTextColor: theme.BG.primary,
     height,
   });
   return (
