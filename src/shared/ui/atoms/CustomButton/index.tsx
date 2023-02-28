@@ -1,25 +1,49 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import {Pressable, StyleProp, Text, TextStyle, ViewStyle} from 'react-native';
-import {useStyles} from './style';
 
-interface CustomButtonProps {
-  title: string;
-  onPress: () => void;
-  styleCBView?: StyleProp<ViewStyle>;
-  styleCBText?: StyleProp<TextStyle>;
+import {getButtonDefaultStyle} from '@shared/ui/atoms/CustomButton/styles';
+
+import {useTheme} from '@theme/useTheme';
+
+interface ButtonProps {
+  text?: string;
+  onPress?: () => void;
+  buttonType?: 'primary' | 'secondary';
+  children?: ReactElement;
+  viewStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
+  isDisabled?: boolean;
+  height?: number | string;
+  isLoading?: boolean;
 }
 
-export const CustomButton: React.FC<CustomButtonProps> = ({
-  title,
+export const CustomButton: React.FC<ButtonProps> = ({
+  text,
+  buttonType = 'primary',
   onPress,
-  styleCBView,
-  styleCBText,
+  children,
+  viewStyle,
+  textStyle,
+  isDisabled,
+  height = 56,
+  isLoading = false,
 }) => {
-  const styles = useStyles();
-
+  const {theme} = useTheme();
+  const styles = getButtonDefaultStyle({
+    buttonType,
+    isDisabled: isDisabled || isLoading,
+    primaryBackgroundColor: theme.primary,
+    secondaryBorderColor: theme.primary,
+    primaryTextColor: theme.white,
+    secondaryTextColor: theme.primary,
+    height,
+  });
   return (
-    <Pressable onPress={onPress} style={[styles.container, styleCBView]}>
-      <Text style={styleCBText || styles.text}>{title}</Text>
+    <Pressable
+      disabled={isDisabled || isLoading}
+      onPress={onPress}
+      style={[styles.view, viewStyle]}>
+      {text ? <Text style={[styles.text, textStyle]}>{text}</Text> : children}
     </Pressable>
   );
 };

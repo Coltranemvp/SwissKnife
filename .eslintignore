@@ -1,0 +1,10 @@
+/.git
+/.vscode
+/.idea
+public
+node_modules
+bin
+**/*.d.ts
+**/*.eslirc
+**/__generated__
+build
