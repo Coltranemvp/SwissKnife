@@ -25,5 +25,9 @@
     "october": "Oct",
     "november": "Nov",
     "december": "Dec"
+  },
+  "RatingScreen": {
+    "title": "Name of input",
+    "placeholder": "Type here..."
   }
 }
