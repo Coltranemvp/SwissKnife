@@ -32,7 +32,7 @@ export const Calendar: React.FC<CalendarProps> = ({
   const {theme} = useTheme();
   const styles = useStyles();
   return (
-    <View style={styles.container(theme.white)}>
+    <View style={styles.container(theme.BG.white)}>
       <CustomButton
         height={24}
         viewStyle={styles.button(theme.calendar.buttonColor)}

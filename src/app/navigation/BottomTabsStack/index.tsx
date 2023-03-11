@@ -9,12 +9,12 @@ import {useStore} from 'effector-react';
 import {BottomTabs} from '@shared/ui/organisms/BottomTabs';
 import {$isScrolledOnBottomTab} from '@shared/model/scrollingContentOnBottomTabs';
 import {useOffsetWithTiming} from '@shared/lib/useOffsetWithTiming';
-import {FeedNewScreen} from '@screens/FeedNewScreen';
 import {BottomTabsStackParams} from '@shared/types/navigation/BottomTabsStackParams';
 
 import {ProfileScreen} from '@screens/ProfileScreen';
 import {RatingScreen} from '@screens/RatingScreen';
 import {SearchScreen} from '@screens/SearchScreen';
+import {OptionsFeedScreen} from '@screens/OptionsFeedScreen';
 
 const Tab = createBottomTabNavigator<BottomTabsStackParams>();
 
@@ -40,7 +40,7 @@ export const TabNavigation: React.FC = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Tab.Screen name={'OrderStack'} component={FeedNewScreen} />
+      <Tab.Screen name={'OptionsFeedScreen'} component={OptionsFeedScreen} />
       <Tab.Screen name={'SearchOrderStack'} component={SearchScreen} />
       <Tab.Screen name={'WalletStack'} component={ProfileScreen} />
       <Tab.Screen name={'ProfileScreen'} component={RatingScreen} />

@@ -15,6 +15,7 @@ interface BottomTabProps {
   isFocused: boolean;
   iconColor: string;
   iconName: string;
+  title: string;
   onPress: () => void;
 }
 export const BottomTab: React.FC<BottomTabProps> = ({
@@ -22,6 +23,7 @@ export const BottomTab: React.FC<BottomTabProps> = ({
   iconColor,
   iconName,
   onPress,
+  title,
 }) => {
   const styles = useStyles();
   const {theme} = useTheme();
@@ -47,7 +49,7 @@ export const BottomTab: React.FC<BottomTabProps> = ({
         <Icon color={iconColor} name={currentName} />
       </Animated.View>
       {isFocused && (
-        <CustomText style={styles.text(iconColor)}>{iconName}</CustomText>
+        <CustomText style={styles.text(iconColor)}>{title}</CustomText>
       )}
     </Pressable>
   );

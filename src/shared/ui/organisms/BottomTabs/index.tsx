@@ -9,7 +9,7 @@ import {setIsBottomBar} from '@shared/model/currentSafeAreaColor';
 import {useTheme} from '@shared/theme/useTheme';
 
 import {BottomTab} from './BottomTab';
-import {BottomTabEnum} from './config';
+import {BottomTabIcon, BottomTabName} from './config';
 import {useStyles} from './styles';
 
 interface BottomTabItemProps {
@@ -38,7 +38,11 @@ export const BottomTabs: React.FC<BottomTabItemProps> = ({
   const styles = useStyles();
 
   const getTabName = (route: string) => {
-    return BottomTabEnum[route as keyof typeof BottomTabEnum]?.toLowerCase();
+    return BottomTabName[route as keyof typeof BottomTabName];
+  };
+
+  const getIconName = (route: string) => {
+    return BottomTabIcon[route as keyof typeof BottomTabIcon]?.toLowerCase();
   };
 
   const getIconColor = (index: number) => {
@@ -58,7 +62,8 @@ export const BottomTabs: React.FC<BottomTabItemProps> = ({
             }}
             isFocused={focused === index}
             iconColor={getIconColor(index)}
-            iconName={getTabName(item)}
+            iconName={getIconName(item)}
+            title={getTabName(item)}
           />
         );
       })}

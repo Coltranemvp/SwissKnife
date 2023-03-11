@@ -1,5 +1,5 @@
 export type BottomTabsStackParams = {
-  OrderStack: undefined;
+  OptionsFeedScreen: undefined;
   WalletStack: undefined;
   ProfileScreen: undefined;
   SearchOrderStack: undefined;

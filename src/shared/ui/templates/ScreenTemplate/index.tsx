@@ -16,6 +16,7 @@ interface PageTemplateProps {
   scrollProps?: ScrollViewProps;
   style?: StyleProp<ViewStyle>;
   safeAreaStyle?: StyleProp<ViewStyle>;
+  isScrolled?: boolean;
 }
 
 export const ScreenTemplate: React.FC<PageTemplateProps> = ({
@@ -24,6 +25,7 @@ export const ScreenTemplate: React.FC<PageTemplateProps> = ({
   scrollProps,
   style,
   safeAreaStyle,
+  isScrolled = true,
 }) => {
   const styles = useStyles();
   const {theme} = useTheme();
@@ -40,18 +42,26 @@ export const ScreenTemplate: React.FC<PageTemplateProps> = ({
       };
     }, [currentBackgroundColor, defaultColor]),
   );
+  const content = (
+    <View style={[styles.wholePage(currentBackgroundColor), style]}>
+      {children}
+    </View>
+  );
+
   return (
     <View style={[styles.safeArea(currentBackgroundColor), safeAreaStyle]}>
-      <ScrollView
-        keyboardShouldPersistTaps="handled"
-        ref={scrollViewRef}
-        contentContainerStyle={styles.scrollView}
-        {...scrollProps}
-        showsVerticalScrollIndicator={false}>
-        <View style={[styles.wholePage(currentBackgroundColor), style]}>
-          {children}
-        </View>
-      </ScrollView>
+      {isScrolled ? (
+        <ScrollView
+          keyboardShouldPersistTaps="handled"
+          ref={scrollViewRef}
+          contentContainerStyle={styles.scrollView}
+          {...scrollProps}
+          showsVerticalScrollIndicator={false}>
+          {content}
+        </ScrollView>
+      ) : (
+        <>{content}</>
+      )}
     </View>
   );
 };
