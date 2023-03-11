@@ -34,11 +34,11 @@ const styles = StyleSheet.create({
 export const useStyles = () => {
   return {
     ...styles,
-    ViewFlex: (borderColor: string) => ({
+    viewFlex: (borderColor: string) => ({
       ...styles.viewFlex,
       borderColor,
     }),
-    Text: (color: string) => ({
+    text: (color: string) => ({
       ...styles.text,
       color,
     }),

@@ -33,26 +33,23 @@ export const CustomTextInput: React.FC<CustomInputProps> = ({
   value,
   onChange,
 }) => {
-  const viewTextInputStyles = useStyles();
+  const styles = useStyles();
 
   const {theme} = useTheme();
 
   return (
-    <View style={(viewTextInputStyles.view, inputStyle)}>
-      <Text
-        style={
-          textInputStyle || viewTextInputStyles.Text(theme.text.secondary)
-        }>
+    <View style={(styles.view, inputStyle)}>
+      <Text style={textInputStyle || styles.text(theme.text.secondary)}>
         {title}
       </Text>
       <View
-        style={viewTextInputStyles.ViewFlex(
+        style={styles.viewFlex(
           errorText ? theme.input.error : theme.input.primary,
         )}>
         <TextInput
           value={value}
           onChangeText={text => onChange(text)}
-          style={viewTextInputStyles.input}
+          style={styles.input}
           placeholder={placeholder || ''}
         />
         <View>{rightContent}</View>
