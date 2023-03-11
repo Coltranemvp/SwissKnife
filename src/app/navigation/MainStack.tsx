@@ -2,7 +2,7 @@ import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
 import {MainStackParams} from '../../shared/types/navigation/MainStackParams';
-import {TabNavigation} from './BottomTabsStack';
+import {TabNavigation} from './BottomTabsStack/BottomTabsStack';
 
 const Stack = createStackNavigator<MainStackParams>();
 
