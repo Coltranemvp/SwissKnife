@@ -21,6 +21,10 @@ export const themes = {
       primary: '#010101',
       disable: '#B2BCC4',
     },
+    input: {
+      error: 'red',
+      primary: '#e6ffec',
+    },
     icon: {
       primary: 'black',
       secondary: '#585858',
@@ -52,6 +56,10 @@ export const themes = {
       disable: '#F9F9FC',
       whiteOpacity: 'rgba(255, 255, 255, 0.1)',
       white: '#FFFFFF',
+    },
+    input: {
+      error: 'red',
+      primary: '#e6ffec',
     },
     text: {
       primary: 'white',

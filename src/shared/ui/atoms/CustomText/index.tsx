@@ -32,7 +32,7 @@ export const CustomText: React.FC<TextProps> = React.memo(
         {...config}
         style={[
           styles.text({
-            color: color || theme.black,
+            color: color || theme.text.secondary,
             fontSize,
             fontWeight,
             lineHeight,

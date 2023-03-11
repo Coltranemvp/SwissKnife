@@ -1,37 +1,35 @@
-import {CustomButton} from '@shared/ui/atoms/CustomButton';
+import {useTheme} from '@shared/theme/useTheme';
 import {CustomText} from '@shared/ui/atoms/CustomText';
 import {CustomTextInput} from '@shared/ui/atoms/CustomTextInput';
+import {Icon} from '@shared/ui/atoms/Icon';
 import {ScreenTemplate} from '@shared/ui/templates/ScreenTemplate';
 import React, {useState} from 'react';
+import {useTranslation} from 'react-i18next';
 import {View} from 'react-native';
+import {useStyles} from './styles';
 
 export const RatingScreen: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
+  const {t} = useTranslation();
+  const styles = useStyles();
+  const {theme} = useTheme();
 
   return (
     <ScreenTemplate>
       <CustomText>ToDoList</CustomText>
       <CustomTextInput
-        styleCustomInputView={{padding: 10}}
-        styleCustomInputText={{color: 'black', padding: 10}}
-        title={'Name of input'}
-        placeholder={'Type here...'}
+        inputStyle={styles.toDoInputStyle}
+        textInputStyle={styles.toDoTextInputStyle}
+        title={t('RatingScreen.title')}
+        placeholder={t('RatingScreen.placeholder')}
         value={inputValue}
-        onChangeText={setInputValue}
+        onChange={setInputValue}
         rightContent={
-          <View
-            style={{
-              width: 40,
-              backgroundColor: 'red',
-              flex: 1,
-              borderRadius: 20,
-            }}></View>
+          <View style={styles.toDoActionButton}>
+            <Icon color={theme.icon.active} name={'search'} />
+          </View>
         }
-        onAdd={function (inputValue: string): void {
-          throw new Error('Function not implemented.');
-        }}
       />
-      <CustomButton></CustomButton>
     </ScreenTemplate>
   );
 };

@@ -1,32 +1,30 @@
 import {StyleSheet} from 'react-native';
 
-const viewTextInputStyles = StyleSheet.create({
-  View: {
+const styles = StyleSheet.create({
+  view: {
     height: 100,
-    //backgroundColor: 'purple',
   },
 
-  ViewFlex: {
+  viewFlex: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
 
     borderRadius: 12,
-    borderColor: '#e6ffec',
     borderWidth: 3,
     paddingRight: 16,
   },
 
   text: {
     fontSize: 20,
-    color: 'black',
+    padding: 10,
   },
+
   input: {
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: 16,
-
     height: 40,
 
     flex: 1,
@@ -35,6 +33,14 @@ const viewTextInputStyles = StyleSheet.create({
 
 export const useStyles = () => {
   return {
-    ...viewTextInputStyles,
+    ...styles,
+    ViewFlex: (borderColor: string) => ({
+      ...styles.viewFlex,
+      borderColor,
+    }),
+    Text: (color: string) => ({
+      ...styles.text,
+      color,
+    }),
   };
 };
