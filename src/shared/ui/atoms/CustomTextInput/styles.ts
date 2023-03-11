@@ -1,18 +1,14 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  view: {
-    height: 100,
-  },
-
-  viewFlex: {
+  inputContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
 
     borderRadius: 12,
-    borderWidth: 3,
+    borderWidth: 1,
     paddingRight: 16,
   },
 
@@ -35,7 +31,7 @@ export const useStyles = () => {
   return {
     ...styles,
     viewFlex: (borderColor: string) => ({
-      ...styles.viewFlex,
+      ...styles.inputContainer,
       borderColor,
     }),
     text: (color: string) => ({

@@ -38,7 +38,7 @@ export const CustomTextInput: React.FC<CustomInputProps> = ({
   const {theme} = useTheme();
 
   return (
-    <View style={(styles.view, inputStyle)}>
+    <View style={inputStyle}>
       <Text style={textInputStyle || styles.text(theme.text.secondary)}>
         {title}
       </Text>
