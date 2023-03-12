@@ -19,4 +19,6 @@ module.exports = {
     '^@screens/(.*)$',
     '^[./]',
   ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 };
