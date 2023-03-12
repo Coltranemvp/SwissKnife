@@ -3,6 +3,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {useStore} from 'effector-react';
 
+import '@shared/config/locales/i18n';
 import {
   $currentSafeAreaColor,
   $isBottomBar,
@@ -18,6 +19,7 @@ const App: React.FC = () => {
   const isBottomBar = useStore($isBottomBar);
   const styles = useStyles();
   const {theme} = useTheme();
+
   return (
     <>
       <SafeAreaView

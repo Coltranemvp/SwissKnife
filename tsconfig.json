@@ -42,8 +42,6 @@
   "include": [
     "src",
     ".eslintrc.js",
-    ".prettierrc.js",
     "declarations.d.ts",
-    "types.d.ts"
   ]
 }
