@@ -1,5 +1,3 @@
-import {useTheme} from '@shared/theme/useTheme';
-import {DefaultTFuncReturn} from 'i18next';
 import React, {ReactElement} from 'react';
 import {
   StyleProp,
@@ -9,6 +7,11 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+
+import {DefaultTFuncReturn} from 'i18next';
+
+import {useTheme} from '@shared/theme/useTheme';
+
 import {CustomText} from '../CustomText';
 import {useStyles} from './styles';
 

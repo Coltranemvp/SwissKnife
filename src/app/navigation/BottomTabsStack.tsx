@@ -4,17 +4,18 @@ import {
   BottomTabBarProps,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
+
 import {useStore} from 'effector-react';
 
-import {BottomTabs} from '@shared/ui/organisms/BottomTabs';
-import {$isScrolledOnBottomTab} from '@shared/model/scrollingContentOnBottomTabs';
 import {useOffsetWithTiming} from '@shared/lib/useOffsetWithTiming';
+import {$isScrolledOnBottomTab} from '@shared/model/scrollingContentOnBottomTabs';
 import {BottomTabsStackParams} from '@shared/types/navigation/BottomTabsStack';
+import {BottomTabs} from '@shared/ui/organisms/BottomTabs';
 
+import {OptionsFeedScreen} from '@screens/OptionsFeedScreen';
 import {ProfileScreen} from '@screens/ProfileScreen';
 import {RatingScreen} from '@screens/RatingScreen';
 import {SearchScreen} from '@screens/SearchScreen';
-import {OptionsFeedScreen} from '@screens/OptionsFeedScreen';
 
 const Tab = createBottomTabNavigator<BottomTabsStackParams>();
 

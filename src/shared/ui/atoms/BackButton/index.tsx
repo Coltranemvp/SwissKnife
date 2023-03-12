@@ -4,8 +4,8 @@ import {Pressable, StyleProp, ViewStyle} from 'react-native';
 import {StackActions, useNavigation} from '@react-navigation/native';
 
 import {navigationRef} from '@shared/lib/rootNavigation';
-import {Icon} from '@shared/ui/atoms/Icon';
 import {useTheme} from '@shared/theme/useTheme';
+import {Icon} from '@shared/ui/atoms/Icon';
 
 interface BackButtonProps {
   style?: StyleProp<ViewStyle>;

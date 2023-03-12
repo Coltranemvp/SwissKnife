@@ -1,5 +1,6 @@
-import {TextAlignType} from '@shared/types/ui/TextAlign';
 import {FlexAlignType, StyleSheet} from 'react-native';
+
+import {TextAlignType} from '@shared/types/ui/TextAlign';
 
 export const styles = StyleSheet.create({
   container: {

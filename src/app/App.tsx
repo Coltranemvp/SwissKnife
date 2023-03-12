@@ -1,12 +1,15 @@
+import React from 'react';
+import {SafeAreaView} from 'react-native-safe-area-context';
+
+import {useStore} from 'effector-react';
+
 import {
   $currentSafeAreaColor,
   $isBottomBar,
 } from '@shared/model/currentSafeAreaColor';
 import {withProviders} from '@shared/providers/withNavigation';
 import {useTheme} from '@shared/theme/useTheme';
-import {useStore} from 'effector-react';
-import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
+
 import {MainStack} from './navigation/MainStack';
 import {useStyles} from './styles';
 

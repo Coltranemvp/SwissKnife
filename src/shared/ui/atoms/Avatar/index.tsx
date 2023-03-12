@@ -3,8 +3,8 @@ import {StyleProp, View, ViewStyle} from 'react-native';
 
 import {useTheme} from '@theme/useTheme';
 
-import {useStyles} from './styles';
 import {CustomText} from '../CustomText';
+import {useStyles} from './styles';
 
 interface AvatarProps {
   title: string;

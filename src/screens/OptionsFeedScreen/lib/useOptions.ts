@@ -1,5 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
+
 import {IconName} from '@shared/config/iconList';
 import {MainStackParams} from '@shared/types/navigation/MainStack';
 

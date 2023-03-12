@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "react-native start",
     "prettier:fix": "prettier --write",
+    "pretty:all": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
     "test": "jest"
   },
   "dependencies": {

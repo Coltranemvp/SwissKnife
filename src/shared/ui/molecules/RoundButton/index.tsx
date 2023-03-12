@@ -1,11 +1,12 @@
 import React from 'react';
 import {Pressable, StyleProp, View, ViewStyle} from 'react-native';
 
+import {IconName} from '@shared/config/iconList';
+import {Icon} from '@shared/ui/atoms/Icon';
+
 import {useTheme} from '@theme/useTheme';
 
 import {useStyles} from './styles';
-import {IconName} from '@shared/config/iconList';
-import {Icon} from '@shared/ui/atoms/Icon';
 
 interface RoundButtonProps {
   iconName: IconName;

@@ -1,9 +1,11 @@
 import React from 'react';
 
-import {createStackNavigator, StackHeaderProps} from '@react-navigation/stack';
+import {StackHeaderProps, createStackNavigator} from '@react-navigation/stack';
+
 import {OptionsStackParams} from '@shared/types/navigation/OptionsStack';
-import {CalendarScreen} from '@screens/CalendarScreen';
 import {Header} from '@shared/ui/organisms/Header';
+
+import {CalendarScreen} from '@screens/CalendarScreen';
 
 const Stack = createStackNavigator<OptionsStackParams>();
 

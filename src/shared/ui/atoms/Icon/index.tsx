@@ -1,6 +1,8 @@
-import {IconName, iconsList} from '../../../config/iconList';
 import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
+
+import {IconName, iconsList} from '../../../config/iconList';
+
 interface IconProps {
   name: IconName;
   style?: StyleProp<ViewStyle>;

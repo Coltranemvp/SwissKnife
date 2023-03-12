@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
+
 import {MainStackParams} from '../../shared/types/navigation/MainStack';
 import {TabNavigation} from './BottomTabsStack';
 import {OptionsStack} from './OptionsStack';

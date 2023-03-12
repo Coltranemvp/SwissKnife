@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleProp, View, ViewStyle} from 'react-native';
 
+import {RoundButtonType} from '@shared/types/ui/RoundButton';
+import {RoundButton} from '@shared/ui/molecules/RoundButton';
 import {UserActionButton} from '@shared/ui/molecules/UserActionButton';
 
 import {useStyles} from './styles';
-import {RoundButton} from '@shared/ui/molecules/RoundButton';
-import {RoundButtonType} from '@shared/types/ui/RoundButton';
 
 interface BottomTabsHeader {
   userName: string;

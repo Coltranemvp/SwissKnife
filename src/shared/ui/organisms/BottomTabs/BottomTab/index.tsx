@@ -2,14 +2,13 @@ import React from 'react';
 import {Pressable} from 'react-native';
 import Animated from 'react-native-reanimated';
 
+import {IconName} from '@shared/config/iconList';
 import {useOffsetWithTiming} from '@shared/lib/useOffsetWithTiming';
-import {Icon} from '@shared/ui/atoms/Icon';
-import {CustomText} from '@shared/ui/atoms/CustomText';
-
 import {useTheme} from '@shared/theme/useTheme';
+import {CustomText} from '@shared/ui/atoms/CustomText';
+import {Icon} from '@shared/ui/atoms/Icon';
 
 import {useStyles} from './styles';
-import {IconName} from '@shared/config/iconList';
 
 interface BottomTabProps {
   isFocused: boolean;

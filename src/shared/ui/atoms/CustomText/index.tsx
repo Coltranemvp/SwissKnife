@@ -1,11 +1,13 @@
 import React, {ReactElement} from 'react';
 import {
   Text as NativeText,
-  TextStyle,
   TextProps as NativeTextProps,
+  TextStyle,
 } from 'react-native';
-import {useStyles} from './styles';
+
 import {useTheme} from '@theme/useTheme';
+
+import {useStyles} from './styles';
 
 export type TextProps = Pick<
   TextStyle,

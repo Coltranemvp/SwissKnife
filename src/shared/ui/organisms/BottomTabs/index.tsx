@@ -5,7 +5,6 @@ import Animated from 'react-native-reanimated';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 
 import {setIsBottomBar} from '@shared/model/currentSafeAreaColor';
-
 import {useTheme} from '@shared/theme/useTheme';
 
 import {BottomTab} from './BottomTab';

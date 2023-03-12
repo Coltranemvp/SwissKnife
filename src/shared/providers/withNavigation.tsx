@@ -1,9 +1,11 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {navigationRef} from '../lib/rootNavigation';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
+import {NavigationContainer} from '@react-navigation/native';
+
 import {compose} from '@shared/lib/compose';
+
+import {navigationRef} from '../lib/rootNavigation';
 
 const withNavigation = (children: Function) => () => {
   return (

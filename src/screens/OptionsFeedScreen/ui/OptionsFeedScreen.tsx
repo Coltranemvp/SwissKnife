@@ -1,13 +1,16 @@
+import React from 'react';
+import {Pressable, View} from 'react-native';
+
+import {useStore} from 'effector-react';
+
 import {setScrolledOnBottomTab} from '@shared/lib/setScrolledOnBottomTab';
 import {$scrollValue} from '@shared/model/scrollingContentOnBottomTabs';
-import {ScreenTemplate} from '@shared/ui/templates/ScreenTemplate';
-import {useStore} from 'effector-react';
-import React from 'react';
-import {OptionsHeader} from './OptionsHeader';
-import {useOptions} from '../lib/useOptions';
-import {Pressable, View} from 'react-native';
-import {Icon} from '@shared/ui/atoms/Icon';
 import {CustomText} from '@shared/ui/atoms/CustomText';
+import {Icon} from '@shared/ui/atoms/Icon';
+import {ScreenTemplate} from '@shared/ui/templates/ScreenTemplate';
+
+import {useOptions} from '../lib/useOptions';
+import {OptionsHeader} from './OptionsHeader';
 
 export const OptionsFeedScreen: React.FC = () => {
   const scrollValue = useStore($scrollValue);

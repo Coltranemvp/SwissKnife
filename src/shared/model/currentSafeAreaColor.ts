@@ -1,5 +1,6 @@
-import {themes} from '@shared/theme/themes';
 import {createEvent, restore} from 'effector';
+
+import {themes} from '@shared/theme/themes';
 
 const setSafeAreaColor = createEvent<string>();
 

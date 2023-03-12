@@ -3,9 +3,8 @@ import {View} from 'react-native';
 
 import dayjs from 'dayjs';
 
-import {CustomButton} from '@shared/ui/atoms/CustomButton';
-
 import {useTheme} from '@shared/theme/useTheme';
+import {CustomButton} from '@shared/ui/atoms/CustomButton';
 
 import {CalendarGrid} from './CalendarGrid';
 import {MonthPicker} from './MonthPicker';

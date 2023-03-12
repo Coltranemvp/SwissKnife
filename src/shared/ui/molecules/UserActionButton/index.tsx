@@ -2,12 +2,12 @@ import React from 'react';
 import {Pressable, StyleProp, View, ViewStyle} from 'react-native';
 
 import {Avatar} from '@shared/ui/atoms/Avatar';
+import {CustomText} from '@shared/ui/atoms/CustomText';
 import {Icon} from '@shared/ui/atoms/Icon';
 
 import {useTheme} from '@theme/useTheme';
 
 import {useStyles} from './styles';
-import {CustomText} from '@shared/ui/atoms/CustomText';
 
 interface UserActionButtonProps {
   avatarTitle: string;

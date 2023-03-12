@@ -8,6 +8,7 @@ import {scrollTop} from '@shared/lib/scrollTo';
 import {setSafeAreaColor} from '@shared/model/currentSafeAreaColor';
 
 import {useTheme} from '@theme/useTheme';
+
 import {useStyles} from './styles';
 
 interface PageTemplateProps {

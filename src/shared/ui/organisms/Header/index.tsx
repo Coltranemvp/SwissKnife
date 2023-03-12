@@ -1,11 +1,14 @@
 import React from 'react';
-import {useStyles} from './styles';
 import {FlexAlignType, View} from 'react-native';
-import {BackButton} from '@shared/ui/atoms/BackButton';
+
 import {useStore} from 'effector-react';
+
 import {$currentSafeAreaColor} from '@shared/model/currentSafeAreaColor';
 import {useTheme} from '@shared/theme/useTheme';
+import {BackButton} from '@shared/ui/atoms/BackButton';
 import {CustomText} from '@shared/ui/atoms/CustomText';
+
+import {useStyles} from './styles';
 
 interface HeaderProps {
   withBackButton?: boolean;
