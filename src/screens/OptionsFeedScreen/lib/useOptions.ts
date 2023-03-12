@@ -15,7 +15,7 @@ export const useOptions = (): OptionType[] => {
   return [
     {
       iconName: 'calendar',
-      title: 'calendar',
+      title: 'Calendar',
       onPress: () => navigate('OptionsStack'),
     },
   ];
