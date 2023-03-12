@@ -9,7 +9,7 @@ import {useStore} from 'effector-react';
 import {BottomTabs} from '@shared/ui/organisms/BottomTabs';
 import {$isScrolledOnBottomTab} from '@shared/model/scrollingContentOnBottomTabs';
 import {useOffsetWithTiming} from '@shared/lib/useOffsetWithTiming';
-import {BottomTabsStackParams} from '@shared/types/navigation/BottomTabsStackParams';
+import {BottomTabsStackParams} from '@shared/types/navigation/BottomTabsStack';
 
 import {ProfileScreen} from '@screens/ProfileScreen';
 import {RatingScreen} from '@screens/RatingScreen';

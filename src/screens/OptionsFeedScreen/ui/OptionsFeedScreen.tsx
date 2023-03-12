@@ -1,15 +1,17 @@
 import {setScrolledOnBottomTab} from '@shared/lib/setScrolledOnBottomTab';
 import {$scrollValue} from '@shared/model/scrollingContentOnBottomTabs';
-import {Calendar} from '@widgets/Calendar';
 import {ScreenTemplate} from '@shared/ui/templates/ScreenTemplate';
-import dayjs from 'dayjs';
 import {useStore} from 'effector-react';
-import React, {useState} from 'react';
+import React from 'react';
 import {HomeScreenHeader} from './HomeScreenHeader';
+import {useOptions} from '../lib/useOptions';
+import {Pressable} from 'react-native';
+import {Icon} from '@shared/ui/atoms/Icon';
 
 export const OptionsFeedScreen: React.FC = () => {
-  const [selectedDate, setSelectedDate] = useState(dayjs());
   const scrollValue = useStore($scrollValue);
+
+  const options = useOptions();
   return (
     <ScreenTemplate
       isScrolled={false}
@@ -19,7 +21,13 @@ export const OptionsFeedScreen: React.FC = () => {
         scrollEventThrottle: 32,
       }}>
       <HomeScreenHeader />
-      <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+      <>
+        {options.map(item => (
+          <Pressable onPress={item.onPress}>
+            <Icon name={item.iconName} color={'red'} />
+          </Pressable>
+        ))}
+      </>
     </ScreenTemplate>
   );
 };

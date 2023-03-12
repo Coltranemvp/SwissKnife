@@ -5,6 +5,7 @@ import order from '@assets/svg/Package.svg';
 import star from '@assets/svg/Star.svg';
 import nextArrow from '@assets/svg/NextArrow.svg';
 import calendar from '@assets/svg/Calendar.svg';
+import backArrow from '@assets/svg/BackArrow.svg';
 
 export const iconsList = {
   wallet,
@@ -14,6 +15,7 @@ export const iconsList = {
   star,
   nextArrow,
   calendar,
+  backArrow,
 };
 
 export type IconName = keyof typeof iconsList;

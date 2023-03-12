@@ -5,7 +5,7 @@ import {UserActionButton} from '@shared/ui/molecules/UserActionButton';
 
 import {useStyles} from './styles';
 import {RoundButton} from '@shared/ui/molecules/RoundButton';
-import {RoundButtonType} from '@shared/types/RoundButtonType';
+import {RoundButtonType} from '@shared/types/ui/RoundButton';
 
 interface BottomTabsHeader {
   userName: string;

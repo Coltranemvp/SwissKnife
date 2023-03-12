@@ -1,5 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 import {IconName} from '@shared/config/iconList';
+import {MainStackParams} from '@shared/types/navigation/MainStack';
 
 type OptionType = {
   iconName: IconName;
@@ -9,12 +11,12 @@ type OptionType = {
 };
 
 export const useOptions = (): OptionType[] => {
-  const {navigation} = useNavigation();
+  const {navigate} = useNavigation<StackNavigationProp<MainStackParams>>();
   return [
     {
       iconName: 'calendar',
       title: 'calendar',
-      onPress: () => {},
+      onPress: () => navigate('OptionsStack'),
     },
   ];
 };

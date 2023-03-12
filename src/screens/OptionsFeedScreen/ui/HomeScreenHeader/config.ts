@@ -1,4 +1,4 @@
-import {RoundButtonType} from '@shared/types/RoundButtonType';
+import {RoundButtonType} from '@shared/types/ui/RoundButton';
 
 export const useActionButtonsData = (isGetNotification: boolean) => {
   return [
