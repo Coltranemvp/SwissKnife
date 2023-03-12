@@ -3,7 +3,7 @@ import {$scrollValue} from '@shared/model/scrollingContentOnBottomTabs';
 import {ScreenTemplate} from '@shared/ui/templates/ScreenTemplate';
 import {useStore} from 'effector-react';
 import React from 'react';
-import {HomeScreenHeader} from './HomeScreenHeader';
+import {OptionsHeader} from './OptionsHeader';
 import {useOptions} from '../lib/useOptions';
 import {Pressable} from 'react-native';
 import {Icon} from '@shared/ui/atoms/Icon';
@@ -20,7 +20,7 @@ export const OptionsFeedScreen: React.FC = () => {
           setScrolledOnBottomTab(nativeEvent, scrollValue),
         scrollEventThrottle: 32,
       }}>
-      <HomeScreenHeader />
+      <OptionsHeader />
       <>
         {options.map(item => (
           <Pressable onPress={item.onPress}>

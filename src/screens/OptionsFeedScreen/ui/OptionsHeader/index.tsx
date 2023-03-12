@@ -6,7 +6,7 @@ import {BottomTabsHeaderTemplate} from '@shared/ui/templates/BottomTabsHeader';
 import {useActionButtonsData} from './config';
 import {useStyles} from './styles';
 
-export const HomeScreenHeader: React.FC = () => {
+export const OptionsHeader: React.FC = () => {
   const actionData = useActionButtonsData(true);
   const styles = useStyles();
   return (
