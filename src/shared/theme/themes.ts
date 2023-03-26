@@ -9,11 +9,17 @@ export const themes = {
       disable: '#F9F9FC',
       whiteOpacity: 'rgba(255, 255, 255, 0.1)',
       white: '#FFFFFF',
+      fourthly: '#171719',
+      fifthly: '#5C5E5D',
+      sixthly: '#BCBEBC',
+      seventhly: '#333334',
+      eighthly: '#59595A',
     },
     text: {
       primary: 'white',
       secondary: 'black',
       active: 'red',
+      tertiary: '#C4CCCB',
     },
     bottomTab: {
       primaryBG: '#E92518',
@@ -24,6 +30,8 @@ export const themes = {
     input: {
       error: 'red',
       primary: '#e6ffec',
+      secondary: '#364646',
+      placeholder: '#ADBEBB',
     },
     icon: {
       primary: 'black',
@@ -56,15 +64,23 @@ export const themes = {
       disable: '#F9F9FC',
       whiteOpacity: 'rgba(255, 255, 255, 0.1)',
       white: '#FFFFFF',
+      fourthly: '#171719',
+      fifthly: '#5C5E5D',
+      sixthly: '#BCBEBC',
+      seventhly: '#333334',
+      eighthly: '#59595A',
     },
     input: {
       error: 'red',
       primary: '#e6ffec',
+      secondary: '#364646',
+      placeholder: '#ADBEBB',
     },
     text: {
       primary: 'white',
       secondary: 'black',
       active: 'red',
+      tertiary: '#C4CCCB',
     },
     bottomTab: {
       primaryBG: '#E92518',

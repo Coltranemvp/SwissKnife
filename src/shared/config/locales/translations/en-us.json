@@ -26,8 +26,18 @@
     "november": "Nov",
     "december": "Dec"
   },
-  "RatingScreen": {
+  "SearchScreen": {
     "title": "Name of input",
     "placeholder": "Type here..."
+  },
+
+  "MoviesScreen": {
+    "placeholder": "Search",
+    "header": "What would you like to watch?",
+    "newMovies": "New movies",
+    "upcomingMovies": "Upcoming movies"
+  },
+  "MoviesDetailsScreen": {
+    "casts": "Casts"
   }
 }

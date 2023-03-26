@@ -1,21 +1,17 @@
 import {StyleSheet} from 'react-native';
 
-const styles = StyleSheet.create({
-  toDoInputStyle: {
-    padding: 10,
+export const styles = StyleSheet.create({
+  container: {
+    padding: 16,
+    alignItems: 'center',
+    height: 80,
   },
 
-  toDoTextInputStyle: {
-    padding: 10,
-  },
-
-  toDoActionButton: {
-    padding: 5,
+  icon: {
+    alignItems: 'center',
   },
 });
 
-export const useStyles = () => {
-  return {
-    ...styles,
-  };
-};
+export const useStyles = () => ({
+  ...styles,
+});
