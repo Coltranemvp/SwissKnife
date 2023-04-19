@@ -1,7 +1,7 @@
 import {useTranslation} from 'react-i18next';
 import {Image, Pressable, View} from 'react-native';
 
-import image from '@shared/assets/svg/png/batman.png';
+import image from '@shared/assets/png/batman.png';
 import {goBack} from '@shared/lib/rootNavigation';
 import {useTheme} from '@shared/theme/useTheme';
 import {CustomText} from '@shared/ui/atoms/CustomText';
@@ -9,6 +9,7 @@ import {Icon} from '@shared/ui/atoms/Icon';
 import CustomStarRating from '@shared/ui/molecules/CustomStarRating';
 import {ScreenTemplate} from '@shared/ui/templates/ScreenTemplate';
 
+import CustomPressableIcon from '../../shared/ui/molecules/CustomPressableIcon';
 import CustomCasts from './Casts';
 import {useStyles} from './styles';
 
@@ -21,18 +22,16 @@ export const MoviesDetailsScreen: React.FC = () => {
     <ScreenTemplate style={{padding: 0}}>
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={image} />
-        <Pressable
-          style={styles.navigation(theme.BG.fifthly, theme.BG.sixthly)}
-          onPress={goBack}>
-          <Icon name={'leftArrow'} />
-        </Pressable>
+        <CustomPressableIcon name={'backArrow'} onPress={goBack} />
         <View style={styles.header}>
           <CustomText style={styles.textHeader(theme.text.primary)}>
             Batman
           </CustomText>
-          <View style={styles.play(theme.BG.fifthly, theme.BG.sixthly)}>
-            <Icon name={'play'} />
-          </View>
+          <CustomPressableIcon
+            name={'play'}
+            onPress={goBack}
+            style={styles.player(theme.BG.fifthly, theme.BG.sixthly)}
+          />
         </View>
       </View>
       <View style={styles.container(theme.BG.fourthly)}>
@@ -53,9 +52,9 @@ export const MoviesDetailsScreen: React.FC = () => {
           and becomes the personification of merciless retribution for the
           citizens.
         </CustomText>
-        <View style={styles.hrLine(theme.input.secondary)}></View>
+        <View style={styles.devider(theme.input.secondary)} />
         <CustomText style={styles.textCasts(theme.text.tertiary)}>
-          {t('MoviesDetailsScreen.casts')}
+          {t('moviesDetailsScreen.casts')}
         </CustomText>
         <CustomCasts />
       </View>

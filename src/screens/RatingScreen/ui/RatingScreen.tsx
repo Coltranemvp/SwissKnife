@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, Text, View} from 'react-native';
+import WebView from 'react-native-webview';
 
 import {CustomText} from '@shared/ui/atoms/CustomText';
 import {Icon} from '@shared/ui/atoms/Icon';
@@ -28,6 +29,9 @@ export const RatingScreen: React.FC = () => {
             <CustomText>{item.title}</CustomText>
           </Pressable>
         ))}
+      </View>
+      <View style={{marginTop: 20, height: 500}}>
+        <WebView source={{uri: 'https://www.google.ru/?hl=ru'}} />
       </View>
     </ScreenTemplate>
   );

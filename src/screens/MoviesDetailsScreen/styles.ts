@@ -6,18 +6,18 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
 
-  navigation: {
+  player: {
     justifyContent: 'center',
     alignItems: 'center',
-    height: 50,
-    width: 50,
+    marginLeft: 90,
+    marginTop: 355,
+    height: 60,
+    width: 60,
     borderWidth: 2,
     borderRadius: 50,
-    margin: 10,
   },
 
   image: {
-    marginHorizontal: 0,
     justifyContent: 'center',
     width: '100%',
     height: '100%',
@@ -44,17 +44,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 
-  play: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 90,
-    marginTop: 355,
-    height: 60,
-    width: 60,
-    borderWidth: 2,
-    borderRadius: 50,
-  },
-
   text: {
     fontSize: 17,
     padding: 7,
@@ -75,9 +64,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  hrLine: {
+  devider: {
     height: 2,
-    width: 290,
+    width: '85%',
     marginHorizontal: 30,
   },
 
@@ -90,7 +79,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: 50,
     width: 50,
-    backgroundColor: 'red',
   },
 });
 
@@ -112,17 +100,12 @@ export const useStyles = () => ({
     ...styles.textCasts,
     color,
   }),
-  hrLine: (backgroundColor: string) => ({
-    ...styles.hrLine,
+  devider: (backgroundColor: string) => ({
+    ...styles.devider,
     backgroundColor,
   }),
-  navigation: (backgroundColor: string, borderColor: string) => ({
-    ...styles.navigation,
-    backgroundColor,
-    borderColor,
-  }),
-  play: (backgroundColor: string, borderColor: string) => ({
-    ...styles.play,
+  player: (backgroundColor: string, borderColor: string) => ({
+    ...styles.player,
     backgroundColor,
     borderColor,
   }),

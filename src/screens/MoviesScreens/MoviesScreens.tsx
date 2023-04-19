@@ -29,35 +29,31 @@ export const MoviesScreens: React.FC = () => {
   return (
     <ScreenTemplate style={{padding: 0}}>
       <View style={styles.container(theme.BG.fourthly)}>
-        <View style={styles.headerView}>
+        <View style={styles.header}>
           <CustomText style={styles.textHeader(theme.text.primary)}>
-            {t('MoviesScreen.header')}
+            {t('moviesScreen.header')}
           </CustomText>
         </View>
-        <View>
-          <CustomTextInput
-            leftContent={
-              <View>
-                <Icon color={theme.icon.active} name={'searchTwo'} />
-              </View>
-            }
-            inputStyle={styles.moviesInputStyle(theme.input.secondary)}
-            borderColor={theme.input.secondary}
-            textInputStyle={styles.moviesTextInputStyle}
-            placeholder={t('MoviesScreen.placeholder')}
-            placeholderTextColor={theme.input.placeholder}
-            value={inputValue}
-            onChange={setInputValue}
-            rightContent={
-              <View>
-                <Icon color={theme.icon.active} name={'microphone'} />
-              </View>
-            }
-          />
-        </View>
+
+        <CustomTextInput
+          leftContent={
+            <View>
+              <Icon color={theme.icon.active} name={'searchTwo'} />
+            </View>
+          }
+          inputStyle={styles.moviesInputStyle(theme.input.secondary)}
+          borderColor={theme.input.secondary}
+          textInputStyle={styles.moviesTextInputStyle}
+          placeholder={t('moviesScreen.placeholder')}
+          placeholderTextColor={theme.input.placeholder}
+          value={inputValue}
+          onChange={setInputValue}
+          rightContent={<Icon color={theme.icon.active} name={'microphone'} />}
+        />
+
         <View>
           <CustomText style={styles.textBody(theme.text.tertiary)}>
-            {t('MoviesScreen.newMovies')}
+            {t('moviesScreen.newMovies')}
           </CustomText>
           <ScrollView horizontal={true} style={styles.scrollView}>
             {movies.map((item, index) => (
@@ -81,7 +77,7 @@ export const MoviesScreens: React.FC = () => {
 
         <View>
           <CustomText style={styles.textBody(theme.text.tertiary)}>
-            {t('MoviesScreen.upcomingMovies')}
+            {t('moviesScreen.upcomingMovies')}
           </CustomText>
           <ScrollView horizontal={true} style={styles.scrollView}>
             {upcomingMovies.map((item, index) => (

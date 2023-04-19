@@ -19,7 +19,10 @@ export const CustomStarRating: React.FC<CustomStarRatingProps> = ({
   style,
 }) => {
   const styles = useStyles();
-  const [selectRating, setSelectRating] = useState(defaultRating || 3);
+  const defaultStarNumber = 3;
+  const [selectRating, setSelectRating] = useState(
+    defaultRating || defaultStarNumber,
+  );
   const starData = useRatingData(count);
 
   return (

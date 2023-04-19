@@ -20,8 +20,6 @@ const App: React.FC = () => {
   const styles = useStyles();
   const {theme} = useTheme();
 
-  linter check
-
   return (
     <>
       <SafeAreaView

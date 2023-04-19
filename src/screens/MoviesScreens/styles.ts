@@ -11,9 +11,9 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
-  headerView: {
-    paddingHorizontal: 60,
-    paddingTop: 102,
+  header: {
+    marginHorizontal: '20%',
+    marginTop: '30%',
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 20,
@@ -24,7 +24,6 @@ export const styles = StyleSheet.create({
   },
 
   moviesTextInputStyle: {
-    backgroundColor: 'red',
     margin: 0,
     padding: 0,
     height: 0,

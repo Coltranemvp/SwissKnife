@@ -17,7 +17,7 @@ export const CustomCasts = () => {
       {movieCastData.map((item, index) => (
         <View style={styles.castersGap} key={index}>
           {item.map((item, index) => (
-            <View style={styles.box}>
+            <View style={styles.box} key={index}>
               <View
                 style={styles.textContainer(
                   theme.BG.seventhly,

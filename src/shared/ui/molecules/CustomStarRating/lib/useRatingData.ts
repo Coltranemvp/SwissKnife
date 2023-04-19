@@ -1,3 +1,4 @@
 export const useRatingData = (starCount?: number) => {
-  return [...Array(starCount || 5).keys()];
+  const starNumber = 5;
+  return [...Array(starCount || starNumber).keys()];
 };
