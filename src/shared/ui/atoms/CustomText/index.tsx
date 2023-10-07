@@ -5,6 +5,8 @@ import {
   TextStyle,
 } from 'react-native';
 
+import {TFunction} from 'i18next';
+
 import {useTheme} from '@theme/useTheme';
 
 import {useStyles} from './styles';
@@ -13,7 +15,7 @@ export type TextProps = Pick<
   TextStyle,
   'fontWeight' | 'fontSize' | 'color' | 'lineHeight' | 'fontFamily'
 > & {style?: TextStyle} & {config?: NativeTextProps} & {
-  children?: string | ReactElement;
+  children?: string | ReactElement | TFunction;
 };
 
 export const CustomText: React.FC<TextProps> = React.memo(
@@ -41,7 +43,7 @@ export const CustomText: React.FC<TextProps> = React.memo(
           }),
           style,
         ]}>
-        {children}
+        <>{children}</>
       </NativeText>
     );
   },

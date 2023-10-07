@@ -43,8 +43,8 @@ export const TabNavigation: React.FC = () => {
       }}>
       <Tab.Screen name={'OptionsFeedScreen'} component={OptionsFeedScreen} />
       <Tab.Screen name={'SearchOrderStack'} component={SearchScreen} />
-      <Tab.Screen name={'WalletStack'} component={ProfileScreen} />
-      <Tab.Screen name={'ProfileScreen'} component={RatingScreen} />
+      <Tab.Screen name={'ProfileScreen'} component={ProfileScreen} />
+      <Tab.Screen name={'WalletStack'} component={RatingScreen} />
     </Tab.Navigator>
   );
 };

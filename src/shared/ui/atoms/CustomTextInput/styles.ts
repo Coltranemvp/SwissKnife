@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderWidth: 1,
     paddingRight: 16,
+    paddingHorizontal: 16,
   },
 
   text: {
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
 export const useStyles = () => {
   return {
     ...styles,
-    viewFlex: (borderColor: string) => ({
+    inputContainer: (borderColor: string) => ({
       ...styles.inputContainer,
       borderColor,
     }),
